@@ -122,15 +122,15 @@ img {
     align-items: center;
 }
 
+
 .hero-image {
     position: absolute;
     inset: 0;
-
-    /* CHANGE YOUR HERO IMAGE HERE */
-    background-image: url("ChatGPT Image Sep 9, 2026, 11_06_12 AM.png");
-
+    background-image: url("./ChatGPT%20Image%20Sep%209%2C%202026%2C%2011_06_12%20AM.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
 
 .hero-overlay {
