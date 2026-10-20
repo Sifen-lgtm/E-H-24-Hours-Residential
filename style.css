@@ -1,0 +1,934 @@
+css
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #243238;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 25px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo span:last-child {
+    font-weight: 400;
+}
+
+.logo-icon {
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    color: white;
+    font-size: 14px;
+}
+
+.nav-links a {
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-button {
+    background: white;
+    color: #315f5b;
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 760px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    /* CHANGE YOUR HERO IMAGE HERE */
+    background-image: url("/Users/sifen/Website/home-care-website/Image/ChatGPT Image Sep 9, 2026, 11_06_12 AM.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(17, 43, 45, 0.85),
+        rgba(17, 43, 45, 0.45),
+        rgba(17, 43, 45, 0.1)
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.hero-text {
+    max-width: 680px;
+}
+
+.small-label,
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #c8dfc9;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 580px;
+    opacity: 0.9;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 15px 27px;
+    background: #315f5b;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    color: white;
+    padding: 15px 20px;
+    font-weight: 600;
+}
+
+.hero-card {
+    position: absolute;
+    bottom: 45px;
+    right: 7%;
+    z-index: 5;
+    background: rgba(255,255,255,0.95);
+    padding: 18px 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hero-card-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #dcecdf;
+    color: #315f5b;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.hero-card strong {
+    display: block;
+}
+
+.hero-card p {
+    font-size: 12px;
+    color: #687477;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-label {
+    color: #315f5b;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-heading h2,
+.about-content h2,
+.why-content h2,
+.contact-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.section-heading h2 span,
+.about-content h2 span,
+.why-content h2 span,
+.contact-info h2 span {
+    color: #6b8f88;
+    font-style: italic;
+}
+
+.section-heading p {
+    color: #697477;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #f7f8f5;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    height: 580px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.experience-card {
+    position: absolute;
+    bottom: 25px;
+    right: -30px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.experience-card strong {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    color: #315f5b;
+}
+
+.experience-card span {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.about-content > p {
+    color: #687477;
+    margin-bottom: 20px;
+}
+
+.check-list {
+    margin: 30px 0;
+}
+
+.check-list div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 13px;
+    font-weight: 600;
+}
+
+.check-list span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #dcecdf;
+    color: #315f5b;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+}
+
+.primary-button.dark {
+    background: #315f5b;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 35px 28px;
+    border: 1px solid #e6e9e7;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #e5f0e6;
+    color: #315f5b;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.service-card p {
+    color: #747e81;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: #315f5b;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+.why-us {
+    background: #eef4ef;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.why-content > p {
+    color: #687477;
+    margin-bottom: 35px;
+}
+
+.feature {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #d3ddd5;
+}
+
+.feature-number {
+    font-size: 13px;
+    font-weight: 700;
+    color: #6b8f88;
+}
+
+.feature h3 {
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #6c7778;
+    font-size: 14px;
+}
+
+.why-image {
+    position: relative;
+}
+
+.why-image img {
+    height: 600px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.quote-card {
+    position: absolute;
+    left: -40px;
+    bottom: 35px;
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.quote-card span {
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    color: #6b8f88;
+    line-height: 0.5;
+}
+
+.quote-card p {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews {
+    background: #f7f8f5;
+}
+
+.review-area {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.review-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.06);
+}
+
+.review-form-container h3,
+.google-review h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.review-intro {
+    color: #747e81;
+    margin-bottom: 30px;
+}
+
+.rating-container {
+    margin-bottom: 25px;
+}
+
+.rating-container > label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.stars-input {
+    display: flex;
+    gap: 5px;
+}
+
+.stars-input button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 32px;
+    color: #d5d9d6;
+    transition: 0.2s;
+}
+
+.stars-input button:hover {
+    transform: scale(1.15);
+}
+
+.stars-input button.selected {
+    color: #d09a43;
+}
+
+.google-review {
+    background: #315f5b;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.google-icon {
+    width: 65px;
+    height: 65px;
+    background: white;
+    color: #4285f4;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 25px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.google-review p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 25px;
+}
+
+.google-button {
+    display: inline-block;
+    background: white;
+    color: #315f5b;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.google-button:hover {
+    transform: translateY(-3px);
+}
+
+.google-review .small-note {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .review-area {
+        grid-template-columns: 1fr;
+    }
+
+    .review-form-container,
+    .google-review {
+        padding: 30px 25px;
+    }
+
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 90px 0;
+    background: #315f5b;
+    color: white;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.section-label.light {
+    color: #c8dfc9;
+}
+
+.cta h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.1;
+    max-width: 700px;
+}
+
+.cta p {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.white-button {
+    flex-shrink: 0;
+    background: white;
+    color: #315f5b;
+    padding: 17px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #f7f8f5;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 100px;
+}
+
+.contact-info > p {
+    color: #687477;
+    max-width: 450px;
+}
+
+.contact-details {
+    margin-top: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: #dcecdf;
+    color: #315f5b;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.contact-item small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #7b8586;
+}
+
+.contact-item strong {
+    font-size: 15px;
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    border: 1px solid #dfe4e1;
+    border-radius: 10px;
+    padding: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #315f5b;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.form-button {
+    width: 100%;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 15px;
+    color: #315f5b;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #1f3637;
+    color: white;
+    padding-top: 70px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 60px;
+}
+
+.footer-brand p {
+    margin-top: 20px;
+    color: #a9b7b5;
+    max-width: 280px;
+    font-size: 14px;
+}
+
+.footer-column h4 {
+    margin-bottom: 20px;
+}
+
+.footer-column a {
+    display: block;
+    color: #a9b7b5;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #8c9c9b;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links,
+    .nav-button {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        height: 700px;
+    }
+
+    .hero-card {
+        display: none;
+    }
+
+    .about-grid,
+    .why-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .hero {
+        height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-image img,
+    .why-image img {
+        height: 450px;
+    }
+
+    .experience-card {
+        right: 10px;
+    }
+
+    .quote-card {
+        left: 10px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
